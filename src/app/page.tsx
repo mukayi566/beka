@@ -86,7 +86,7 @@ export default function LandingPage() {
                 <Link href="/dashboard" className="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-on-primary font-bold rounded-2xl brand-glow hover:scale-[1.02] transition-all flex items-center justify-center gap-2">
                   Start Earning <ArrowRight size={20} />
                 </Link>
-                <Link href="/dashboard" className="px-8 py-4 bg-black/5 border border-black/5 text-foreground font-bold rounded-2xl hover:bg-black/5 transition-all">
+                <Link href="/brand-signup" className="px-8 py-4 bg-black/5 border border-black/5 text-foreground font-bold rounded-2xl hover:bg-black/5 transition-all">
                   Find Talent
                 </Link>
               </div>
@@ -234,7 +234,7 @@ export default function LandingPage() {
                 <Link href="/get-started" className="px-10 py-5 bg-background text-foreground font-bold rounded-3xl text-lg hover:bg-background/90 transition-all text-center">
                   Create Creator Profile
                 </Link>
-                <Link href="/get-started" className="px-10 py-5 bg-transparent border-2 border-on-primary text-on-primary font-bold rounded-3xl text-lg hover:bg-black/5 transition-all text-center">
+                <Link href="/brand-signup" className="px-10 py-5 bg-transparent border-2 border-on-primary text-on-primary font-bold rounded-3xl text-lg hover:bg-black/5 transition-all text-center">
                   Register as a Brand
                 </Link>
               </div>

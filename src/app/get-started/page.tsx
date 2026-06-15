@@ -81,7 +81,7 @@ export default function GetStartedPage() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 }}
                     >
-                        <Link href="/dashboard" className="group block h-full">
+                        <Link href="/brand-signup" className="group block h-full">
                             <div className="glass-card rounded-[2.5rem] p-8 h-full border border-black/5 hover:border-secondary/30 transition-all duration-500 relative overflow-hidden flex flex-col justify-between">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 blur-[60px]" />
 

@@ -31,7 +31,7 @@ export default function Dashboard() {
         // Fallback for other tabs
         return (
             <div className="flex flex-col items-center justify-center min-h-[60vh] text-center space-y-6">
-                <div className="w-24 h-24 bg-white/5 rounded-[2rem] flex items-center justify-center">
+                <div className="w-24 h-24 bg-black/5 rounded-[2rem] flex items-center justify-center">
                     <Settings size={48} className="text-foreground/20 animate-spin-slow" />
                 </div>
                 <div>
@@ -68,24 +68,24 @@ export default function Dashboard() {
                         <input
                             type="text"
                             placeholder="Search anything..."
-                            className="w-full bg-surface border border-black/5 rounded-2xl pl-12 pr-4 py-2.5 text-sm focus:outline-none focus:border-primary/20 transition-all font-medium"
+                            className="w-full bg-black/5 border border-black/5 rounded-2xl pl-12 pr-4 py-2.5 text-sm focus:outline-none focus:border-primary/30 transition-all"
                         />
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <button className="p-2.5 rounded-xl bg-surface text-foreground/40 hover:text-primary transition-all relative border border-transparent hover:border-black/5">
+                        <button className="p-2.5 rounded-xl bg-black/5 text-foreground/60 hover:text-foreground transition-all relative">
                             <Bell size={20} />
                             <span className="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full border-2 border-background" />
                         </button>
-                        <button className="p-2.5 rounded-xl bg-surface text-foreground/40 hover:text-primary md:hidden transition-all border border-transparent" onClick={toggleRole}>
+                        <button className="p-2.5 rounded-xl bg-black/5 text-foreground/60 hover:text-foreground md:hidden transition-all" onClick={toggleRole}>
                             <Settings size={20} />
                         </button>
                         <div className="hidden md:flex items-center gap-3 pl-4 border-l border-black/5">
                             <div className="text-right">
                                 <p className="text-xs font-bold truncate">Alex Mukie</p>
-                                <p className="text-[10px] text-primary font-bold uppercase tracking-widest">{role}</p>
+                                <p className="text-[10px] text-primary font-bold uppercase">{role}</p>
                             </div>
-                            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-accent p-0.5 shadow-sm">
+                            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-secondary p-0.5">
                                 <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${role}`} className="rounded-full bg-surface" alt="Avatar" />
                             </div>
                         </div>

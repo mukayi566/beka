@@ -20,8 +20,8 @@ export default function BrandDashboard() {
         <div className="space-y-8 animate-in fade-in duration-700">
             <header className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
-                    <h1 className="text-3xl font-bold tracking-tight">Brand Intelligence</h1>
-                    <p className="text-foreground/50 font-medium">Nike Africa • Discovering creators in Lagos, Nigeria</p>
+                    <h1 className="text-3xl font-bold">Brand Intelligence</h1>
+                    <p className="text-foreground/50">Nike Africa • Discovering creators in Lagos, Nigeria</p>
                 </div>
                 <div className="flex gap-4">
                     <div className="relative">
@@ -29,10 +29,10 @@ export default function BrandDashboard() {
                         <input
                             type="text"
                             placeholder="Search talent..."
-                            className="bg-surface border border-black/5 rounded-2xl pl-12 pr-4 py-3 text-sm focus:outline-none focus:border-primary/20 transition-all w-64 font-medium"
+                            className="bg-black/5 border border-black/5 rounded-2xl pl-12 pr-4 py-3 text-sm focus:outline-none focus:border-primary/50 transition-all w-64"
                         />
                     </div>
-                    <button className="p-3 bg-surface border border-black/5 rounded-2xl hover:bg-black/5 transition-all text-foreground/40">
+                    <button className="p-3 bg-black/5 border border-black/5 rounded-2xl hover:bg-black/5 transition-all">
                         <Filter size={18} />
                     </button>
                 </div>
@@ -41,10 +41,8 @@ export default function BrandDashboard() {
             {/* Featured AI Recommendations */}
             <section className="space-y-6">
                 <div className="flex items-center gap-2 px-2">
-                    <div className="p-2 bg-primary/10 rounded-lg">
-                        <Sparkles className="text-primary" size={20} />
-                    </div>
-                    <h3 className="font-extrabold tracking-tight">AI-Powered Matches</h3>
+                    <Sparkles className="text-primary" size={20} />
+                    <h3 className="font-bold">AI-Powered Matches</h3>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -56,33 +54,33 @@ export default function BrandDashboard() {
                         <motion.div
                             key={i}
                             whileHover={{ y: -8 }}
-                            className="glass-card rounded-[2.5rem] overflow-hidden group cursor-pointer bg-white border-white shadow-lg hover:shadow-2xl transition-all duration-300"
+                            className="glass-card rounded-[2.5rem] overflow-hidden group cursor-pointer"
                         >
                             <div className="h-48 relative">
                                 <img src={creator.image} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt={creator.name} />
-                                <div className="absolute top-4 right-4 px-3 py-1.5 bg-white/90 backdrop-blur-md rounded-full shadow-sm flex items-center gap-2 border border-black/5">
+                                <div className="absolute top-4 right-4 px-3 py-1.5 bg-background/80 backdrop-blur-md rounded-full border border-black/5 flex items-center gap-2">
                                     <Star size={14} className="text-primary fill-primary" />
                                     <span className="text-xs font-bold text-primary">{creator.score}</span>
                                 </div>
                             </div>
                             <div className="p-8 space-y-4">
                                 <div>
-                                    <h4 className="text-lg font-bold tracking-tight">{creator.name}</h4>
-                                    <p className="text-xs text-foreground/40 font-bold flex items-center gap-1 mt-1">
-                                        <MapPin size={12} className="text-primary/50" /> {creator.location} • {creator.niche}
+                                    <h4 className="text-lg font-bold">{creator.name}</h4>
+                                    <p className="text-xs text-foreground/50 flex items-center gap-1 mt-1">
+                                        <MapPin size={12} /> {creator.location} • {creator.niche}
                                     </p>
                                 </div>
                                 <div className="grid grid-cols-2 gap-4 pb-4 border-b border-black/5">
                                     <div>
-                                        <p className="text-[10px] text-foreground/30 uppercase font-extrabold tracking-widest leading-none mb-1.5">Avg Reach</p>
-                                        <p className="text-sm font-extrabold text-foreground/80">250k+</p>
+                                        <p className="text-[10px] text-foreground/40 uppercase font-bold tracking-widest leading-none mb-1">Avg Reach</p>
+                                        <p className="text-sm font-bold">250k+</p>
                                     </div>
                                     <div>
-                                        <p className="text-[10px] text-foreground/30 uppercase font-extrabold tracking-widest leading-none mb-1.5">Eng. Rate</p>
-                                        <p className="text-sm font-extrabold text-foreground/80">12.2%</p>
+                                        <p className="text-[10px] text-foreground/40 uppercase font-bold tracking-widest leading-none mb-1">Eng. Rate</p>
+                                        <p className="text-sm font-bold">12.2%</p>
                                     </div>
                                 </div>
-                                <button className="w-full py-3.5 bg-surface hover:bg-primary text-foreground/70 hover:text-white font-bold rounded-xl text-xs transition-all flex items-center justify-center gap-2 group/btn border border-black/5 hover:border-primary">
+                                <button className="w-full py-3 bg-black/5 hover:bg-primary hover:text-on-primary font-bold rounded-xl text-xs transition-all flex items-center justify-center gap-2 group/btn">
                                     View Full Profile <ChevronRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
                                 </button>
                             </div>
@@ -93,69 +91,67 @@ export default function BrandDashboard() {
 
             {/* Campaign Performance */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <div className="lg:col-span-2 glass-card rounded-[3rem] p-10 flex flex-col justify-between min-h-[400px] bg-white border-white shadow-xl">
+                <div className="lg:col-span-2 glass-card rounded-[3rem] p-10 flex flex-col justify-between min-h-[400px]">
                     <div>
                         <div className="flex items-center justify-between mb-8">
-                            <h3 className="text-xl font-bold tracking-tight">Active Campaigns</h3>
-                            <button className="text-primary text-xs font-extrabold uppercase tracking-widest hover:underline decoration-2 underline-offset-4">View All</button>
+                            <h3 className="text-xl font-bold">Active Campaigns</h3>
+                            <button className="text-primary text-xs font-bold uppercase tracking-widest hover:underline">View All</button>
                         </div>
 
                         <div className="space-y-4">
                             {[
-                                { name: 'Air Max Pulse Launch', creators: 12, budget: '$25,000', progress: 65, color: 'bg-primary' },
-                                { name: 'Lagos Marathon 2024', creators: 8, budget: '$12,500', progress: 40, color: 'bg-accent' },
+                                { name: 'Air Max Pulse Launch', creators: 12, budget: '$25,000', progress: 65 },
+                                { name: 'Lagos Marathon 2024', creators: 8, budget: '$12,500', progress: 40 },
                             ].map((campaign, i) => (
-                                <div key={i} className="p-6 rounded-[2rem] bg-surface border border-black/5 hover:border-primary/20 transition-all cursor-pointer group">
+                                <div key={i} className="p-6 rounded-[2rem] bg-black/5 border border-black/5 hover:border-primary/30 transition-all cursor-pointer group">
                                     <div className="flex justify-between items-center mb-4">
                                         <div>
-                                            <h4 className="font-extrabold group-hover:text-primary transition-colors tracking-tight">{campaign.name}</h4>
-                                            <p className="text-xs text-foreground/40 font-bold mt-1 tracking-wide">{campaign.creators} creators • {campaign.budget} budget</p>
+                                            <h4 className="font-bold group-hover:text-primary transition-colors">{campaign.name}</h4>
+                                            <p className="text-xs text-foreground/40 mt-0.5">{campaign.creators} creators • {campaign.budget} budget</p>
                                         </div>
-                                        <span className="text-sm font-extrabold text-foreground/60">{campaign.progress}%</span>
+                                        <span className="text-sm font-bold">{campaign.progress}%</span>
                                     </div>
                                     <div className="h-2 w-full bg-black/5 rounded-full overflow-hidden">
-                                        <div className={`h-full ${campaign.color}`} style={{ width: `${campaign.progress}%` }} />
+                                        <div className="h-full bg-primary" style={{ width: `${campaign.progress}%` }} />
                                     </div>
                                 </div>
                             ))}
                         </div>
                     </div>
-                    <button className="mt-8 py-4 bg-primary text-on-primary font-bold rounded-2xl primary-glow w-full flex items-center justify-center gap-2 hover:scale-[1.02] transition-all">
+                    <button className="mt-8 py-4 bg-primary text-on-primary font-bold rounded-2xl brand-glow w-full flex items-center justify-center gap-2">
                         <Zap size={18} /> Launch New Campaign
                     </button>
                 </div>
 
-                <div className="glass-card rounded-[3rem] p-10 space-y-8 bg-surface border-black/5 shadow-sm">
-                    <h3 className="font-bold tracking-tight">Conversion Insights</h3>
+                <div className="glass-card rounded-[3rem] p-10 space-y-8">
+                    <h3 className="font-bold">Conversion Insights</h3>
 
                     <div className="space-y-6">
                         {[
-                            { label: 'Direct ROI', value: '4.2x', target: '3.5x', val: 85 },
-                            { label: 'Total Sales', value: '$124.5k', target: '$100k', val: 95 },
-                            { label: 'CPE', value: '$0.12', target: '$0.15', val: 60 },
+                            { label: 'Direct ROI', value: '4.2x', target: '3.5x' },
+                            { label: 'Total Sales', value: '$124.5k', target: '$100k' },
+                            { label: 'CPE', value: '$0.12', target: '$0.15' },
                         ].map((insight, i) => (
                             <div key={i} className="space-y-2">
-                                <div className="flex justify-between text-xs font-extrabold">
-                                    <span className="text-foreground/30 tracking-widest uppercase">{insight.label}</span>
+                                <div className="flex justify-between text-xs font-bold">
+                                    <span className="text-foreground/40 tracking-widest uppercase">{insight.label}</span>
                                     <span className="text-primary">{insight.value}</span>
                                 </div>
-                                <div className="h-2 w-full bg-black/5 rounded-full relative">
-                                    <div className="absolute top-0 bottom-0 left-0 bg-primary/20 rounded-full" style={{ width: '100%' }} />
-                                    <div className="absolute top-0 bottom-0 left-0 bg-primary rounded-full shadow-sm" style={{ width: `${insight.val}%` }} />
+                                <div className="h-1 w-full bg-black/5 rounded-full relative">
+                                    <div className="absolute top-0 bottom-0 left-0 bg-primary/40 rounded-full" style={{ width: '85%' }} />
+                                    <div className="absolute top-0 bottom-0 left-0 bg-primary rounded-full" style={{ width: '60%' }} />
                                 </div>
-                                <p className="text-[10px] text-foreground/30 font-bold">Target: {insight.target}</p>
+                                <p className="text-[10px] text-foreground/30">Target: {insight.target}</p>
                             </div>
                         ))}
                     </div>
 
-                    <div className="p-6 rounded-3xl bg-white border border-black/5 space-y-4 shadow-sm">
+                    <div className="p-6 rounded-2xl bg-black/5 border border-black/5 space-y-4">
                         <div className="flex items-center gap-2">
-                            <div className="p-1.5 bg-secondary/10 rounded-lg">
-                                <CheckCircle2 size={16} className="text-secondary" />
-                            </div>
-                            <p className="text-[10px] font-extrabold uppercase tracking-widest text-foreground/60">Verification Status</p>
+                            <CheckCircle2 size={16} className="text-secondary" />
+                            <p className="text-xs font-bold uppercase tracking-widest">Verification Status</p>
                         </div>
-                        <p className="text-xs text-foreground/40 font-bold leading-relaxed">
+                        <p className="text-xs text-foreground/60 leading-relaxed">
                             Your brand account is fully verified. You have access to Tier 1 creator valuations and smart contract escrow.
                         </p>
                     </div>

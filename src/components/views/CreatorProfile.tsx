@@ -27,7 +27,7 @@ export default function CreatorProfile() {
                     alt="Cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent" />
-                <button className="absolute top-6 right-6 p-3 bg-background/50 backdrop-blur-md rounded-2xl border border-white/10 hover:bg-background/80 transition-all">
+                <button className="absolute top-6 right-6 p-3 bg-background/50 backdrop-blur-md rounded-2xl border border-black/5 hover:bg-background/80 transition-all">
                     <Edit3 size={20} />
                 </button>
             </div>
@@ -35,7 +35,7 @@ export default function CreatorProfile() {
             <div className="px-6 md:px-12 -mt-24 relative z-10">
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-8">
                     <div className="flex flex-col md:flex-row items-center md:items-end gap-6 text-center md:text-left">
-                        <div className="w-40 h-40 rounded-[3rem] border-8 border-background overflow-hidden emerald-glow">
+                        <div className="w-40 h-40 rounded-[3rem] border-8 border-background overflow-hidden brand-glow">
                             <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=creator" className="w-full h-full bg-surface" alt="Avatar" />
                         </div>
                         <div className="pb-4">
@@ -48,10 +48,10 @@ export default function CreatorProfile() {
                         </div>
                     </div>
                     <div className="pb-4 flex gap-4">
-                        <button className="px-8 py-4 bg-primary text-on-primary font-bold rounded-2xl emerald-glow">
+                        <button className="px-8 py-4 bg-primary text-on-primary font-bold rounded-2xl brand-glow">
                             Share Profile
                         </button>
-                        <button className="p-4 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10">
+                        <button className="p-4 bg-black/5 border border-black/5 rounded-2xl hover:bg-black/5">
                             <Settings size={20} />
                         </button>
                     </div>
@@ -60,7 +60,7 @@ export default function CreatorProfile() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
                     {/* Stats */}
                     <div className="glass-card rounded-[2.5rem] p-8 space-y-8">
-                        <h3 className="font-bold border-b border-white/5 pb-4">Social Footprint</h3>
+                        <h3 className="font-bold border-b border-black/5 pb-4">Social Footprint</h3>
                         <div className="space-y-6">
                             {[
                                 { platform: 'Instagram', handle: '@alex_creates', followers: '450k', icon: <Instagram size={20} />, color: 'text-pink-500' },
@@ -79,7 +79,7 @@ export default function CreatorProfile() {
                                 </div>
                             ))}
                         </div>
-                        <button className="w-full py-3 bg-white/5 border border-white/10 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+                        <button className="w-full py-3 bg-black/5 border border-black/5 rounded-xl text-xs font-bold flex items-center justify-center gap-2">
                             Connect New Platform <Plus size={14} />
                         </button>
                     </div>

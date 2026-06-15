@@ -7,17 +7,24 @@ import Link from 'next/link';
 
 export default function GetStartedPage() {
     return (
-        <div className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center p-6 mesh-bg">
+        <div className="min-h-screen bg-background text-foreground flex flex-col items-center justify-center p-6 mesh-bg relative">
             <Link href="/" className="absolute top-8 left-8 text-2xl font-bold text-primary tracking-tight">
                 Beka
             </Link>
 
-            <div className="w-full max-w-4xl space-y-12">
+            <div className="hidden md:block absolute top-8 right-8 text-sm text-foreground/60">
+                Already have an account?{' '}
+                <Link href="/sign-in" className="text-primary font-bold hover:underline">
+                    Sign In
+                </Link>
+            </div>
+
+            <div className="w-full max-w-3xl space-y-10">
                 <div className="text-center space-y-4">
                     <motion.h1
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="text-4xl md:text-6xl font-bold tracking-tight"
+                        className="text-4xl md:text-5xl font-bold tracking-tight"
                     >
                         How do you want to <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">join Beka?</span>
                     </motion.h1>
@@ -31,7 +38,7 @@ export default function GetStartedPage() {
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Creator Path */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -39,16 +46,16 @@ export default function GetStartedPage() {
                         transition={{ delay: 0.3 }}
                     >
                         <Link href="/creator-signup" className="group block h-full">
-                            <div className="glass-card rounded-[3rem] p-10 h-full border border-black/5 hover:border-primary/30 transition-all duration-500 relative overflow-hidden flex flex-col justify-between">
+                            <div className="glass-card rounded-[2.5rem] p-8 h-full border border-black/5 hover:border-primary/30 transition-all duration-500 relative overflow-hidden flex flex-col justify-between">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 blur-[60px]" />
 
                                 <div className="space-y-6 relative">
-                                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-500">
-                                        <User size={32} />
+                                    <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-500">
+                                        <User size={28} />
                                     </div>
                                     <div className="space-y-2">
-                                        <h2 className="text-3xl font-bold">I'm a Creator</h2>
-                                        <p className="text-foreground/60 leading-relaxed">
+                                        <h2 className="text-2xl font-bold">I'm a Creator</h2>
+                                        <p className="text-foreground/60 text-sm leading-relaxed">
                                             Build your Beka Score, discover your true influence, and connect with premium brands for verified sponsorships.
                                         </p>
                                     </div>
@@ -75,16 +82,16 @@ export default function GetStartedPage() {
                         transition={{ delay: 0.4 }}
                     >
                         <Link href="/dashboard" className="group block h-full">
-                            <div className="glass-card rounded-[3rem] p-10 h-full border border-black/5 hover:border-secondary/30 transition-all duration-500 relative overflow-hidden flex flex-col justify-between">
+                            <div className="glass-card rounded-[2.5rem] p-8 h-full border border-black/5 hover:border-secondary/30 transition-all duration-500 relative overflow-hidden flex flex-col justify-between">
                                 <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/5 blur-[60px]" />
 
                                 <div className="space-y-6 relative">
-                                    <div className="w-16 h-16 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary group-hover:scale-110 transition-transform duration-500">
-                                        <Building2 size={32} />
+                                    <div className="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center text-secondary group-hover:scale-110 transition-transform duration-500">
+                                        <Building2 size={28} />
                                     </div>
                                     <div className="space-y-2">
-                                        <h2 className="text-3xl font-bold">I'm a Brand</h2>
-                                        <p className="text-foreground/60 leading-relaxed">
+                                        <h2 className="text-2xl font-bold">I'm a Brand</h2>
+                                        <p className="text-foreground/60 text-sm leading-relaxed">
                                             Access a verified database of African talent. Use data-driven insights to find the perfect match for your campaigns.
                                         </p>
                                     </div>
@@ -109,7 +116,7 @@ export default function GetStartedPage() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.6 }}
-                    className="text-center text-foreground/40 text-sm"
+                    className="md:hidden text-center text-foreground/40 text-sm"
                 >
                     Already have an account?{' '}
                     <Link href="/sign-in" className="text-primary font-bold hover:underline">

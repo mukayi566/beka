@@ -90,15 +90,6 @@ export default function LandingPage() {
                   Find Talent
                 </Link>
               </div>
-
-              <div className="flex items-center gap-6 pt-8 opacity-60">
-                <span className="text-sm font-medium">TRUSTED BY</span>
-                <div className="flex gap-8 grayscale hover:grayscale-0 transition-all">
-                  <span className="font-bold">Safaricom</span>
-                  <span className="font-bold">MTN</span>
-                  <span className="font-bold">Jumia</span>
-                </div>
-              </div>
             </motion.div>
 
             <motion.div

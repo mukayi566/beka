@@ -79,7 +79,7 @@ export default function BottomNav({ role, activeTab, onTabChange }: BottomNavPro
 
     return (
         <nav className="fixed bottom-0 left-0 right-0 z-50 md:hidden">
-            <div className="bg-surface/80 backdrop-blur-2xl border-t border-white/5 px-6 pb-6 pt-3 flex justify-between items-center rounded-t-[2rem] shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.5)]">
+            <div className="bg-surface/95 backdrop-blur-2xl border-t border-black/5 px-6 pb-6 pt-3 flex justify-between items-center rounded-t-[2.5rem] shadow-[0_-10px_40px_-15px_rgba(0,0,0,0.1)]">
                 {items.map((item) => (
                     <NavItem
                         key={item.id}

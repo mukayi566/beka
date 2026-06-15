@@ -57,7 +57,7 @@ export default function Dashboard() {
             {/* Main Content Area */}
             <div className="flex-1 flex flex-col min-w-0">
                 {/* Top Header */}
-                <header className="h-20 flex items-center justify-between px-6 md:px-10 border-b border-white/5 sticky top-0 bg-background/80 backdrop-blur-md z-40">
+                <header className="h-20 flex items-center justify-between px-6 md:px-10 border-b border-black/5 sticky top-0 bg-background/80 backdrop-blur-md z-40">
                     <div className="md:hidden flex items-center gap-2">
                         <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center font-bold text-on-primary">B</div>
                         <span className="text-xl font-bold">Beka</span>
@@ -68,24 +68,24 @@ export default function Dashboard() {
                         <input
                             type="text"
                             placeholder="Search anything..."
-                            className="w-full bg-white/5 border border-white/10 rounded-2xl pl-12 pr-4 py-2.5 text-sm focus:outline-none focus:border-primary/30 transition-all"
+                            className="w-full bg-surface border border-black/5 rounded-2xl pl-12 pr-4 py-2.5 text-sm focus:outline-none focus:border-primary/20 transition-all font-medium"
                         />
                     </div>
 
                     <div className="flex items-center gap-4">
-                        <button className="p-2.5 rounded-xl bg-white/5 text-foreground/60 hover:text-foreground transition-all relative">
+                        <button className="p-2.5 rounded-xl bg-surface text-foreground/40 hover:text-primary transition-all relative border border-transparent hover:border-black/5">
                             <Bell size={20} />
                             <span className="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full border-2 border-background" />
                         </button>
-                        <button className="p-2.5 rounded-xl bg-white/5 text-foreground/60 hover:text-foreground md:hidden transition-all" onClick={toggleRole}>
+                        <button className="p-2.5 rounded-xl bg-surface text-foreground/40 hover:text-primary md:hidden transition-all border border-transparent" onClick={toggleRole}>
                             <Settings size={20} />
                         </button>
-                        <div className="hidden md:flex items-center gap-3 pl-4 border-l border-white/10">
+                        <div className="hidden md:flex items-center gap-3 pl-4 border-l border-black/5">
                             <div className="text-right">
                                 <p className="text-xs font-bold truncate">Alex Mukie</p>
-                                <p className="text-[10px] text-primary font-bold uppercase">{role}</p>
+                                <p className="text-[10px] text-primary font-bold uppercase tracking-widest">{role}</p>
                             </div>
-                            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-secondary p-0.5">
+                            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-accent p-0.5 shadow-sm">
                                 <img src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${role}`} className="rounded-full bg-surface" alt="Avatar" />
                             </div>
                         </div>
